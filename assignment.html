@@ -10,7 +10,7 @@
   <header>
     <h1>Python Data Types Cheat Sheet</h1>
   </header>
-  
+
   <main>
     <h2>String Methods</h2>
     <table>
@@ -29,10 +29,45 @@
           <td>Convert a string to title case</td>
           <td><code>"hello world".capitalize()</code></td>
         </tr>
-        <!-- Add more rows for other string methods -->
+        <tr>
+          <td><code>str.lower()</code></td>
+          <td>Converts all characters to lowercase</td>
+          <td>Convert a string to lowercase</td>
+          <td><code>"HELLO".lower()</code></td>
+        </tr>
+        <tr>
+          <td><code>str.upper()</code></td>
+          <td>Converts all characters to uppercase</td>
+          <td>Convert a string to uppercase</td>
+          <td><code>"hello".upper()</code></td>
+        </tr>
+        <tr>
+          <td><code>str.strip()</code></td>
+          <td>Removes leading and trailing whitespace</td>
+          <td>Remove whitespace from a string</td>
+          <td><code>"  hello  ".strip()</code></td>
+        </tr>
+        <tr>
+          <td><code>str.replace(old, new)</code></td>
+          <td>Replaces all occurrences of old substring with new</td>
+          <td>Replace a substring in a string</td>
+          <td><code>"hello world".replace("world", "python")</code></td>
+        </tr>
+        <tr>
+          <td><code>str.split(sep)</code></td>
+          <td>Splits the string at the specified separator and returns a list</td>
+          <td>Split a string into a list</td>
+          <td><code>"hello,world".split(",")</code></td>
+        </tr>
+        <tr>
+          <td><code>str.join(iterable)</code></td>
+          <td>Concatenates the elements of the iterable separated by the string separator</td>
+          <td>Join a list of strings into one</td>
+          <td><code>",".join(["hello", "world"])</code></td>
+        </tr>
       </tbody>
     </table>
-    
+
     <h2>List Methods</h2>
     <table>
       <thead>
@@ -50,13 +85,158 @@
           <td>Add an element to the end of a list</td>
           <td><code>fruits = ["apple", "banana"]<br>fruits.append("cherry")</code></td>
         </tr>
-        <!-- Add more rows for other list methods -->
+        <tr>
+          <td><code>list.insert(i, x)</code></td>
+          <td>Inserts an item at the specified position</td>
+          <td>Insert an element at a specific index in a list</td>
+          <td><code>fruits = ["apple", "banana"]<br>fruits.insert(1, "cherry")</code></td>
+        </tr>
+        <tr>
+          <td><code>list.remove(x)</code></td>
+          <td>Removes the first item from the list whose value is equal to x</td>
+          <td>Remove the first occurrence of an element from a list</td>
+          <td><code>fruits = ["apple", "banana", "cherry"]<br>fruits.remove("banana")</code></td>
+        </tr>
+        <tr>
+          <td><code>list.pop([i])</code></td>
+          <td>Removes and returns the item at the given position, or the last item if index is not specified</td>
+          <td>Remove and return an element from a list</td>
+          <td><code>fruits = ["apple", "banana", "cherry"]<br>fruits.pop(1)</code></td>
+        </tr>
+        <tr>
+          <td><code>list.index(x)</code></td>
+          <td>Returns the index of the first item whose value is equal to x</td>
+          <td>Find the index of an element in a list</td>
+          <td><code>fruits = ["apple", "banana", "cherry"]<br>fruits.index("banana")</code></td>
+        </tr>
+        <tr>
+          <td><code>list.count(x)</code></td>
+          <td>Returns the number of times x appears in the list</td>
+          <td>Count the occurrences of an element in a list</td>
+          <td><code>fruits = ["apple", "banana", "cherry", "banana"]<br>fruits.count("banana")</code></td>
+        </tr>
+        <tr>
+          <td><code>list.sort()</code></td>
+          <td>Sorts the items of the list in ascending order</td>
+          <td>Sort a list in ascending order</td>
+          <td><code>numbers = [5, 2, 1]<br>numbers.sort()</code></td>
+        </tr>
+        <tr>
+          <td><code>list.reverse()</code></td>
+          <td>Reverses the elements of the list</td>
+          <td>Reverse the order of elements in a list</td>
+          <td><code>fruits = ["apple", "banana", "cherry"]<br>fruits.reverse()</code></td>
+        </tr>
       </tbody>
     </table>
-    
-    <!-- Add more sections for Dictionary and Set methods -->
+
+    <h2>Dictionary Methods</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Description</th>
+          <th>Problem Statement</th>
+          <th>Code Snippet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>dict.get(key, default=None)</code></td>
+          <td>Returns the value for the given key, or default if the key is not found</td>
+          <td>Get the value of a key in a dictionary with a default value</td>
+          <td><code>person = {"name": "John", "age": 30}<br>person.get("age")<br>person.get("city", "Unknown")</code></td>
+        </tr>
+        <tr>
+          <td><code>dict.keys()</code></td>
+          <td>Returns a view object containing the keys of the dictionary</td>
+          <td>Get a list of keys in a dictionary</td>
+          <td><code>person = {"name": "John", "age": 30}<br>person.keys()</code></td>
+        </tr>
+        <tr>
+          <td><code>dict.values()</code></td>
+          <td>Returns a view object containing the values of the dictionary</td>
+          <td>Get a list of values in a dictionary</td>
+          <td><code>person = {"name": "John", "age": 30}<br>person.values()</code></td>
+        </tr>
+        <tr>
+          <td><code>dict.items()</code></td>
+          <td>Returns a view object containing the key-value pairs of the dictionary</td>
+          <td>Get a list of key-value pairs in a dictionary</td>
+          <td><code>person = {"name": "John", "age": 30}<br>person.items()</code></td>
+        </tr>
+        <tr>
+          <td><code>dict.pop(key, default=None)</code></td>
+          <td>Removes and returns the value for the given key, or default if the key is not found</td>
+          <td>Remove and return the value of a key in a dictionary</td>
+          <td><code>person = {"name": "John", "age": 30}<br>person.pop("age")</code></td>
+        </tr>
+        <tr>
+          <td><code>dict.update(other)</code></td>
+          <td>Updates the dictionary with the key-value pairs from other</td>
+          <td>Update a dictionary with new key-value pairs</td>
+          <td><code>person = {"name": "John", "age": 30}<br>person.update({"city": "New York"})</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Set Methods</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Description</th>
+          <th>Problem Statement</th>
+          <th>Code Snippet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>set.add(x)</code></td>
+          <td>Adds an element to the set</td>
+          <td>Add an element to a set</td>
+          <td><code>fruits = {"apple", "banana"}<br>fruits.add("cherry")</code></td>
+        </tr>
+        <tr>
+          <td><code>set.remove(x)</code></td>
+          <td>Removes an element from the set</td>
+          <td>Remove an element from a set</td>
+          <td><code>fruits = {"apple", "banana", "cherry"}<br>fruits.remove("banana")</code></td>
+        </tr>
+        <tr>
+          <td><code>set.discard(x)</code></td>
+          <td>Removes an element from the set if it is a member</td>
+          <td>Remove an element from a set if it exists</td>
+          <td><code>fruits = {"apple", "banana", "cherry"}<br>fruits.discard("banana")</code></td>
+        </tr>
+        <tr>
+          <td><code>set.pop()</code></td>
+          <td>Removes and returns an arbitrary element from the set</td>
+          <td>Remove and return an arbitrary element from a set</td>
+          <td><code>fruits = {"apple", "banana", "cherry"}<br>fruits.pop()</code></td>
+        </tr>
+        <tr>
+          <td><code>set.union(other)</code></td>
+          <td>Returns a new set containing the unique elements from both sets</td>
+          <td>Find the union of two sets</td>
+          <td><code>fruits1 = {"apple", "banana"}<br>fruits2 = {"banana", "cherry"}<br>fruits1.union(fruits2)</code></td>
+        </tr>
+        <tr>
+          <td><code>set.intersection(other)</code></td>
+          <td>Returns a new set containing the common elements between the sets</td>
+          <td>Find the intersection of two sets</td>
+          <td><code>fruits1 = {"apple", "banana"}<br>fruits2 = {"banana", "cherry"}<br>fruits1.intersection(fruits2)</code></td>
+        </tr>
+        <tr>
+          <td><code>set.difference(other)</code></td>
+          <td>Returns a new set containing the elements that are in the first set but not in the second</td>
+          <td>Find the difference between two sets</td>
+          <td><code>fruits1 = {"apple", "banana"}<br>fruits2 = {"banana", "cherry"}<br>fruits1.difference(fruits2)</code></td>
+        </tr>
+      </tbody>
+    </table>
   </main>
-  
+
   <footer>
     <p>&copy; 2023 Python Data Types Cheat Sheet</p>
   </footer>
